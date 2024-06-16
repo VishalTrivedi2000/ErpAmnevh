@@ -11,6 +11,7 @@ namespace AMNEVH.Controllers
     public class EmployeeController : Controller
     {
         // GET: Employee
+        // Hello
         BusinessLayer businessLayer;
         public EmployeeController()
         {
