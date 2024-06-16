@@ -1,0 +1,241 @@
+                            .asdd {
+                                border: 2px solid #253f8e;                                
+                                 font-family: minion-pro, serif;
+                                 font-weight: 700;
+                                 font-style: normal;
+                            }
+                            .uwidth {
+                                font-size: 14px;
+                                font-family: Myriad Pro;
+                                padding: 0px 0 5px;
+                                text-align: center;
+                                width: 100%;
+                                overflow: hidden;
+                                font-weight: bold;
+                            }
+                            .table_my_pdf th {
+                                vertical-align: middle;
+                                padding: 3px 10px;
+                                border: none;
+                                font-weight: bold;
+                                border-left: 1px solid;
+                                border-top: 1px solid #000;
+                                color: #000;
+                                border-collapse: collapse;
+                                font-size: 13px;
+                                text-align: left;
+                            }
+                            .table_my_pdf td {
+                                font-family: Myriad Pro;
+                                vertical-align: middle;
+                                padding: 3px 10px;
+                                border-left: 1px solid;
+                                border-top: 1px solid #000;
+                                border-collapse: collapse;
+                                border-right: 0;
+                                color: #000;
+                                font-size: 12px;
+                            }
+                            .sty278 {
+                                border-top: 1px solid;
+                                color: #000;
+                                text-align: center;
+                                font-size: 14px;
+                                font-family: Myriad Pro;
+                                padding: 5px;
+                            }
+                            .asd{
+                                border: 2px solid #253f8e;
+                                margin-bottom: 15px;
+                                padding:0;
+                                border: 1px solid #000;
+                                overflow: hidden;
+                            }
+                            /* .table_my_pdf_bold {
+                                    border: .5px solid #000;
+                                    border-bottom: none;
+                                    margin: 0;
+                                    vertical-align: middle;
+                                    border-collapse: collapse;
+                                    width: 100%;
+                                    color: #000;
+                                    font-weight: bold;
+                                    text-align: left;
+                                    font-family: Myriad Pro;
+                                } */
+                                /* .table_my_pdf_bold th {
+                                    vertical-align: middle;
+                                    border-collapse: collapse;
+                                    padding: 3px 5px;
+                                    color: #000;
+                                    font-size: 14px;
+                                    text-align: left;
+
+                                } */
+
+                                /* .table_my_pdf_bold td:nth-child(2n) {
+                                    padding-right: 41px;
+                                } */
+
+                                /* .table_my_pdf_bold td:last-child {
+                                    border-right: none;
+                                    border-collapse: collapse;
+                                } */
+
+                                /* .table_my_pdf_bold tr:nth-child(2n) {
+                                    background: rgb(251, 251, 253);
+                                    border-collapse: collapse;
+                                } */
+/* 
+                                .table_my_pdf {
+                                    border-collapse: collapse;
+                                    border-top: .5px solid #000;
+                                    margin-top: 0;
+                                    width: 100%;
+                                    font-family: Myriad Pro;
+
+
+                                } */
+
+                           
+                                /* .table_my_pdf th:first-child {
+                                    border-left: none;
+                                    border-collapse: collapse;
+                                } */
+                                /* .table_my_pdfdetail {
+                                    border-collapse: collapse;
+                                    float: left;
+                                    width: 50%;
+                                    overflow: hidden;
+
+                                } */
+                                /* .table_my_pdfdetail th {
+                                    vertical-align: middle;
+                                    padding: 6px 10px;
+                                    border-collapse: collapse;
+                                    color: #000;
+                                    font-size: 13px;
+                                    text-align: left;
+                                    font-family: Myriad Pro;
+
+                                } */
+/* 
+                                .table_my_pdfdetail span {
+                                    font-weight: bold;
+                                } */
+
+                                /* .table_my_pdfdetail22 {
+                                    border-collapse: collapse;
+
+                                    float: right;
+                                    width: 50%;
+                                    overflow: hidden;
+
+                                } */
+                                /* .table_my_pdfdetail22 th {
+                                    border-collapse: collapse;
+                                    vertical-align: middle;
+                                    padding: 6px 10px;
+                                    border-right: none;
+                                    border-bottom: none;
+                                   
+                                    color: #000;
+                                    font-size: 15px;
+                                    text-align: left;
+                                    font-family: Myriad Pro;
+                                } */
+
+                                /* #tblnew td:last-child {
+                                    display: none;
+                                } */
+
+                                /* #tblnew #td_1 {
+                                    display: block !important;
+                                } */
+
+                                /* .table_my_pdfdetail22 td:last-child {
+                                    border-right: none;
+                                    border-collapse: collapse;
+                                } */
+/* 
+                                .table_my_pdfdetail22 tr:last-child td {
+                                    border-bottom: none;
+                                    border-collapse: collapse;
+                                } */
+
+                                /* .gogo {
+                                    padding: 0 !important;
+                                    font-weight: bold !important;
+                                    color: #000000 !important;
+                                    font-size: 13px !important;
+                                    font-family: Myriad Pro;
+                                } */
+
+                                /* .udiv {
+                                    text-align: center
+                                } */
+                                /* .sty {
+                                    font-weight: bold;
+                                    text-align: left;
+                                    color: #000;
+                                    font-size: 15px;
+                                    font-family: Myriad Pro;
+                                } */
+                             
+                                /* .newtxt489 {
+                                    font-weight: bold;
+                                    color: #000;
+                                    text-align: center;
+                                    font-size: 13px;
+                                    font-family: Myriad Pro;
+                                } */
+
+                                /* .txt489 {
+                                    font-weight: bold;
+                                    color: #000;
+                                    text-align: center;
+                                    font-size: 13px;
+                                    font-family: Myriad Pro;
+
+                                } */
+
+                                /* .sty23 {
+                                    padding-right: 10px;
+                                    font-weight: bold;
+                                } */
+
+                                /* h6 {
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    color: #000;
+                                    border-bottom: 2px solid #000;
+                                    line-height: 2;
+                                    margin: 0;
+                                    padding: 0
+                                } */
+
+                                /* #pt {
+                                    font-family: Myriad Pro;
+                                } */
+
+                              
+/* 
+                                .uwidthnobor {
+                                    padding: 5px 0;
+
+                                    width: 100%;
+                                    overflow: hidden;
+                                } */
+
+                                /* .text-right {
+                                    text-align: right;
+                                } */
+
+                                /* .foot {
+                                    padding: 6px;
+                                    overflow: hidden;
+                                    text-align: center;
+                                    color: #fff;
+                                    font-size: 15px;
+                                    background: #253f8e;
+                                } */

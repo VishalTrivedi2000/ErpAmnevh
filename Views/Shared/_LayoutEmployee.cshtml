@@ -1,0 +1,204 @@
+﻿@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>        Employee Panel    </title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/Content/innser_css/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/innser_css/css/sb-admin-2.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/innser_css/css/style.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/innser_css/css/lines.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/innser_css/css/font-awesome.css" rel="stylesheet">
+    <link href="~/Content/innser_css/css/form_field.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/innser_css/css/custom.css" rel="stylesheet">
+    <link href="~/Content/innser_css/ddmenu/fg.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/innser_css/css/form_field_site.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/innser_css/favicon.png" rel="shortcut icon">
+    <script src="~/Content/innser_css/js/jquery.min.js"></script>
+    <script src="~/Content/innser_css/js/metisMenu.min.js"></script>
+    <script src="~/Content/innser_css/js/custom.js"></script>
+    <script language="javascript" src="~/Content/innser_css/ddmenu/accor.js"></script>
+    <script type="text/javascript">
+        function Confirm() {
+            var confirm_value = document.createElement("INPUT");
+            confirm_value.type = "hidden"; confirm_value.name = "confirm_value";
+            if (confirm("Do you want to delete data?")) {
+                confirm_value.value = "Yes";
+            } else {
+                confirm_value.value = "No";
+            }
+            document.forms[0].appendChild(confirm_value);
+        }
+        function del_data() {
+            if (confirm('want to delete?')) { return true; } else { return false; }
+        }
+    </script>
+    <script>
+        function validPdf(formid) {
+            var pathLength = formid.value.length; var lastDot = formid.value.lastIndexOf("."); var fileType = formid.value.substring(lastDot, pathLength); var elmid = formid.getAttribute('id'); if ((formid.value != "") && ((fileType == ".jpg") || (fileType == ".png"))) { i = 1; } else { formid.value = ""; alert("Invalid image format. Use only .jpg or .png format"); formid.focus(); return false; }
+        }</script>
+    <script>
+    function validImage(formid) {
+            var pathLength = formid.value.length; var lastDot = formid.value.lastIndexOf(".");
+            var fileType = formid.value.substring(lastDot, pathLength); var elmid = formid.getAttribute('id'); if ((formid.value != "") && (fileType == ".gif") || (fileType == ".jpg") || (fileType == ".png") || (fileType == ".GIF") || (fileType == ".JPG") || (fileType == ".PNG") || (fileType == ".JPEG") || (fileType == ".jpeg") || (fileType == ".BMP") || (fileType == ".bmp")) { i = 1; } else { formid.value = ""; alert("Invalid image format"); formid.focus(); return false; }
+        }</script>
+
+
+
+
+    <style>
+        .ajax__tab_active .ajax__tab_outer {
+            background-color: #013bb1;
+            padding: 8px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="top1 navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="col-md-4">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../index.html" target="_blank"><img src="../admin/images/logo.png"></a>
+                </div>
+            </div>
+            <div class="col-md-3 mid_div"> </div>
+            <div class="col-md-5 lastyup">
+                <div class="lasty">
+                    <div class="lastyu">
+                        <a><i class="fa fa-question-circle" aria-hidden="true"></i>Version <span id="ctl00_lblVersion">1.3</span> </a> |
+                        <a href="change_password.aspx"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Change Password </a> |
+                        <a href="Logout.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
+                    </div>
+                    <div class="lastyb">
+                        <a href="EMPProfileUpdate.aspx"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Update Profile </a> |
+                        <a> <i class="fa fa-user" aria-hidden="true"></i> <span id="ctl00_lbl_name">SAKSHI</span> </a>
+                        <br>
+                        <a> <span id="ctl00_Label3">Sunday, June 16, 2024</span> <span id="ctl00_Label4">1:37:11 AM</span> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="abc">
+            <div class="col-md-2 no_pad">
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav ">
+                        <ul class="nav" id="side-menu">
+                            <li>
+                                <a href="Home.aspx"> <i class="fa fa-home fa-2x" aria-hidden="true"></i> Home </a>
+                            </li>
+                            <li>
+                                <a href="Home.aspx?PR=P"> <i class="fa fa-laptop nav_icon"></i> Profile </a>
+                            </li>
+                            <li class="">
+                                <a href="#"> <i class="fa fa-laptop nav_icon"></i> Leave  <span class="fa arrow"></span> </a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="check_verification.aspx?PID=AL"> <i class="fa fa-chevron-right"></i>Leave Apply </a>
+                                    </li>
+                                    <li>
+                                        <a href="check_verification.aspx?PID=VL"> <i class="fa fa-chevron-right"></i>View Leave </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#"> <i class="fa fa-laptop nav_icon"></i>Payroll  <span class="fa arrow"></span> </a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="check_verification.aspx?PID=VS"> <i class="fa fa-chevron-right"></i>View Salary </a>
+                                    </li>
+                                    <li>
+                                        <a href="check_verification.aspx?PID=VSN"> <i class="fa fa-chevron-right"></i>Verify Salary </a>
+                                    </li>
+                                    <li>
+                                        <a href="check_verification.aspx?PID=VA"> <i class="fa fa-chevron-right"></i>Advance </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="demand.aspx"> <i class="fa fa-laptop nav_icon" aria-hidden="true"></i>  Item Request </a>
+                            </li>
+                            <li>
+                                <a href="EmpResignation.aspx"> <i class="fa fa-laptop nav_icon" aria-hidden="true"></i>Apply for Resignation </a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="active"> <i class="fa fa-laptop nav_icon"></i>  No Dues<span class="fa arrow"></span> </a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="EmpResigSecurity.aspx"> <i class="fa fa-chevron-right"></i>Submit Request </a>
+                                    </li>
+                                    <li>
+                                        <a href="NOduesStatus.aspx"> <i class="fa fa-chevron-right"></i>No Dues Status </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#"> <i class="fa fa-laptop nav_icon"></i> Academic Performance<span class="fa arrow"></span> </a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="OpenPDF.aspx"> <i class="fa fa-chevron-right"></i>Observation Rubric </a>
+                                    </li>
+                                    <li>
+                                        <a href="WOBSTeacher.aspx"> <i class="fa fa-chevron-right"></i>View Observation </a>
+                                    </li>
+                                    <li>
+                                        <a href="WOBSTeacherNoteBook.aspx"> <i class="fa fa-chevron-right"></i>View NoteBook </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#"> <i class="fa fa-laptop nav_icon"></i> Administrative Performance<span class="fa arrow"></span> </a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
+                                    <li>
+                                        <a href="WAREMPAppricate.aspx"> <i class="fa fa-chevron-right"></i>View Appreciation </a>
+                                    </li>
+                                    <li>
+                                        <a href="WAREmployee.aspx"> <i class="fa fa-chevron-right"></i>View Warning </a>
+                                    </li>
+                                    <li>
+                                        <a href="WAREmpDefault.aspx"> <i class="fa fa-chevron-right"></i>View Default Notice </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-laptop nav_icon"></i> TODO Task <span class="fa arrow"></span> <span class="spannot"> 0 </span> </a>
+                                <ul class="nav nav-second-level collapse">
+                                    <li>
+                                        <a href="ToDoTaskView.aspx"> <i class="fa fa-chevron-right"></i>View New TODO Task </a>
+                                    </li>
+                                    <li>
+                                        <a href="ToDoTaskViewC.aspx"> <i class="fa fa-chevron-right"></i>Complete TODO Task </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="text-align:center">
+                        <img id="ctl00_Image1" class="panel-primary usr_img" src="../admin/upload/EmpInfo/EmpInfo_pic_up_IMG-20240428-WA0019-min.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 no_pad">
+
+                <div id="page-wrapper" style="min-height: 902px;">
+                    <div class="graphs">
+                        <form>
+                            <div class="workplace">
+                                @RenderBody()
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>
+                Copyright © 2023
+                <strong>AMNEVH TECHNOLOGIES PVT LTD</strong>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

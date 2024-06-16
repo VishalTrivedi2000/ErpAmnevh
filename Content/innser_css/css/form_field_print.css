@@ -1,0 +1,136 @@
+
+
+.sidebar ul li a.active {
+color: #337ab7!important;
+}
+
+.table_my_pdf_bold  {
+border: 1px solid #000;
+border-bottom: none;
+margin: 0;
+vertical-align: middle;
+
+width: 100%;
+color: #000;
+font-weight: bold;
+text-align: left;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.table_my_pdf_bold  td,.table_my_pdf_bold  th{
+vertical-align: middle;
+padding: 3px 5px;
+color: #000;
+font-size: 17px;text-align: left;
+
+}
+.table_my_pdf_bold  td:nth-child(2n) {
+/*   width:80%;
+*/}
+.table_my_pdf_bold  td:last-child {
+border-right: none;
+}
+
+.table_my_pdf_bold  td:nth-child(1),.table_my_pdf  td:nth-child(3){}
+
+.table_my_pdf_bold table tr {
+
+}
+
+.table_my_pdf_bold  tr:nth-child(2n) {
+background: rgb(251, 251, 253);
+}
+
+.table_my_pdf  {
+
+border-top: 1px solid #000;
+/* -webkit-border-radius: 8px; */
+/* border-radius: 8px; */
+width: 100%;
+
+
+}
+.table_my_pdf  th{
+vertical-align: middle;
+padding: 6px 10px;
+border: #000 1px solid;
+font-weight:bold;
+/* width: 27%; */
+color: #000;
+font-size: 12px;text-align: left;
+
+}
+.table_my_pdf  td{
+vertical-align: middle;
+padding: 6px 10px;
+border: #000 1px solid;
+
+/* width: 27%; */
+color: #000;
+font-size: 12px;text-align: left;
+
+}
+.table_my_pdf  td:nth-child(2n) {
+/*   width:80%;
+*/}
+.table_my_pdf  td:last-child {
+
+}
+
+
+.table_my_pdfdetail  {
+
+float:left;
+/* -webkit-border-radius: 8px; */
+/* border-radius: 8px; */
+width: 50%;
+overflow: hidden;
+
+}
+.table_my_pdfdetail  td,.table_my_pdfdetail  th{
+vertical-align: middle;
+padding: 6px 10px;
+
+color: #000;
+font-size: 13px;
+text-align: left;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+.table_my_pdfdetail  span{font-weight:bold;}
+
+.table_my_pdfdetail22  {
+
+
+float:right;
+width: 50%;
+overflow: hidden;
+
+}
+.table_my_pdfdetail22  td,.table_my_pdfdetail22  th{
+vertical-align: middle;
+padding: 6px 10px;
+border-right: #000 1px solid;
+border-bottom: #000 1px solid;
+/* width: 27%; */
+color: #000;
+font-size: 12px;text-align: left;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.table_my_pdfdetail22  td:last-child {
+border-right: none;
+}
+.table_my_pdfdetail22  tr:last-child td{
+border-bottom: none;
+}
+
+.udiv{text-align:center}
+
+.sty{font-weight: bold;
+color: #000;
+font-size: 20px;
+}
+h6{font-size:20px;font-weight:bold;color:#000;border-bottom:2px solid #000;line-height: 2;margin:0;padding:0}
+#pt {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;  }
+
+

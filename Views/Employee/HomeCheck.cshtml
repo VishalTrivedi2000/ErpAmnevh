@@ -1,0 +1,64 @@
+﻿@model AMNEVH.Models.UserType
+@{
+    ViewBag.Title = "HomeCheck";
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>
+        Employee Panel
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post">
+        <div class="row" style="height:100vh">
+            <div class="col-sm-1">      </div>
+            <div class="col-sm-10" style="height: 97%; background: white; box-shadow: 1px 1px 11px 5px #2e1f1f; border-radius: 5px;">
+                <div class="card" style=" width: -webkit-fill-available; top: 10%;">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-2"> </div>
+                            <div class="col-sm-2">
+                                @Model.welcomeText
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-2"><label for="ddlTypeID">Select User Type :</label> </div>
+                            <div class="col-sm-2">
+                                <input type="text" name="ddlType" value="" hidden id="ddlType" />
+                                @Html.DropDownListFor(model => Model.ddlTypeID, (IEnumerable<SelectListItem>)ViewBag.ddlType, new { @class = "form-control", @id = "ddlTypeID" })
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-sm-5"></div>
+                            <div class="col-sm-2"> <button>Sign In!</button></div>
+                            <div class="col-sm-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1">      </div>
+        </div>
+    </form>
+    <script>
+        document.getElementById("ddlTypeID").addEventListener("change", (ele) => {
+            document.getElementById("ddlType").value = ele.target.children[ele.target.selectedIndex].textContent;
+        })
+    </script>
+</body>
+</html>

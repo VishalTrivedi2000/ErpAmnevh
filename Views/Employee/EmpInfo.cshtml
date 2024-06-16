@@ -1,0 +1,2061 @@
+﻿
+@{
+    ViewBag.Title = "EmpInfo";
+    Layout = "~/Views/Shared/_LayoutEmployee.cshtml";
+}
+
+<form method="post" id="aspnetForm" enctype="multipart/form-data">
+    <div class="workplace">
+        <div class="card">
+            <div class="card-header">
+        <div class="row">
+            <div class="col-sm12">
+                <h1>
+                    Employee Info Details
+                </h1>
+            </div>
+        </div>
+
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div id="UpdatePanel1">
+                <div class="span9">
+                    <div id="TabContainer1" style="font-weight: normal; width: 100%; visibility: visible;" class="ajax__tab_container ajax__tab_default">
+                        <div id="header" class="ajax__tab_header">
+                            <span id="tab" class="ajax__tab_active">
+                                <span class="ajax__tab_outer">
+                                    <span class="ajax__tab_inner">
+                                        <span class="ajax__tab_tab" id="__tab_TabPanel1">
+                                            General
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span id="tab">
+                                <span class="ajax__tab_outer">
+                                    <span class="ajax__tab_inner">
+                                        <span class="ajax__tab_tab" id="__tab_TabPanel2">
+                                            Qualification
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span id="tab">
+                                <span class="ajax__tab_outer">
+                                    <span class="ajax__tab_inner">
+                                        <span class="ajax__tab_tab" id="__tab_TabPanel4">
+                                            Work Experience
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span id="TabPanel5_tab">
+                                <span class="ajax__tab_outer">
+                                    <span class="ajax__tab_inner">
+                                        <span class="ajax__tab_tab" id="__tab_TabPanel5">
+                                            Other
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span id="TabPanel6_tab">
+                                <span class="ajax__tab_outer">
+                                    <span class="ajax__tab_inner">
+                                        <span class="ajax__tab_tab" id="__tab_TabPanel6">
+                                            Document Enclose
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span id="TabPanel3_tab">
+                                <span class="ajax__tab_outer">
+                                    <span class="ajax__tab_inner">
+                                        <span class="ajax__tab_tab" id="__tab_TabPanel3">Bank Detail</span>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                        <div id="body" class="ajax__tab_body">
+                            <div id="TabPanel1" class="ajax__tab_panel" style="visibility: visible;">
+                                <div class="">
+                                    <div class="">
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <div class="head clearfix">
+                                                    <div class="isw-grid"></div>
+                                                    <h1>Employee Details </h1>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="table_my table_old" id="" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Department
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="DeptID" id="DeptID">
+                                                                    <option value="">Select</option>
+                                                                    <option value="DT1">ACADEMICS</option>
+                                                                    <option value="DT2">ADMINISTRATIVE</option>
+                                                                    <option value="DT7">FINANCE</option>
+                                                                    <option selected="selected" value="DT5">HR</option>
+                                                                    <option value="DT6">IT &amp; MEDIA</option>
+                                                                    <option value="DT8">LEADERSHIP COUNCIL</option>
+                                                                    <option value="DT4">R &amp; D</option>
+                                                                    <option value="DT10">SUBORDINATE</option>
+                                                                    <option value="DT3">TRANSPORT</option>
+
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Designation
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="DesigID" id="DesigID">
+                                                                    <option value="">Select</option>
+                                                                    <option value="DN069">CLERK (HR-STUDENT AFFAIRS))</option>
+                                                                    <option selected="selected" value="DN068">FRONT DESK EXECUTIVE</option>
+                                                                    <option value="DN096">HEAD CLERK (HR-STUDENT AFFAIRS)</option>
+                                                                    <option value="DN067">HR &amp; ADMISSION HEAD</option>
+                                                                    <option value="DN071">TRAINING HEAD</option>
+
+                                                                </select>
+                                                                <span id="15" style="display:none;">Select</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <h3>General Information </h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Name&nbsp;
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Name" type="text" value="SAKSHI" id="Name">
+                                                                <span id="9" style="display:none;">Required</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Father's Name / Husband Name
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="FName" type="text" value="AVINASH SINGH" id="FName">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Mobile No. 1
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="mobile1" type="text" value="9411869671" id="mobile1" autocomplete="off" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;">
+                                                                <span id="1" style="display:none;">Required</span>
+                                                                <div style="width:100%">
+                                                                    <span><span id="mobile1_lbl" display="Dynamic"></span></span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mobile No. 2</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Mobile2" type="text" value="8171127204" id="Mobile2" autocomplete="off" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Date Of Birth
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="DOB" type="text" value="15/07/2001" id="DOB" autocomplete="off">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Email </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Email" type="text" value="MANJUSINGH817100@GMAIL.COM" id="Email">
+                                                                <span id="5" title="Invalid Email" style="display:none;"> Invalid Email </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Sex
+                                                                <span> *</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <table id="Sex">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input id="Sex_0" type="radio" name="Sex" value="Male">
+                                                                                <label for="Sex_0">Male</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input id="Sex_1" type="radio" name="Sex" value="Female" checked="checked">
+                                                                                <label for="Sex_1">Female</label>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cast</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="Cast" id="Cast">
+                                                                    <option value="General">General</option>
+                                                                    <option value="OBC">OBC</option>
+                                                                    <option value="SC">SC</option>
+                                                                    <option value="ST">ST</option>
+
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <h3>Marital Status </h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Marrital Status
+                                                                <span> *</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <table id="MStatus">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input id="MStatus_0" type="radio" name="MStatus" value="Married">
+                                                                                <label for="MStatus_0">Married</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input id="MStatus_1" type="radio" name="MStatus" value="Single" checked="checked">
+                                                                                <label for="MStatus_1">Single</label>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Spouse Name</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="spouseName" type="text" value="NA" id="spouseName">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <h3>Details of Children </h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>No. of Children </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Child" type="text" value="NA" id="Child">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <h3>
+                                                                    Give two reference of permanent residents of
+                                                                    <city> and having their own house  </city>
+                                                                </h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Name (A)</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="refNameA" type="text" value="SHREHEE SHAKYA" id="refNameA">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Phone/Mobile</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="refMobA" type="text" value="6386250501" id="refMobA">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Address</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="reAddressA" rows="2" cols="20" id="reAddressA" class="23">TULSI NAGAR ETAWAH</textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Ho w do you know the person and since how long ?</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="refKnowA" rows="2" cols="20" id="refKnowA" class="23">SINCE 7 YEAERS</textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Name (B)</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="refNameB" type="text" value="SUNAINA" id="refNameB">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Phone/Mobile</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="refMobB" type="text" value="7668979396" id="refMobB">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Address</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="reAddressB" rows="2" cols="20" id="reAddressB" class="23">VAIBHAV BIHAR</textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Ho w do you know the person and since how long ?</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="refKnowB" rows="2" cols="20" id="refKnowB" class="23">5 YEARS</textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <h3>Permanent Address </h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Address </td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="add1" rows="2" cols="20" id="add1" class="23">VILLAGE NARKHI</textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                State
+                                                                <span> *</span>
+                                                            </td>
+                                                            <td>::</td>
+                                                            <td>
+                                                                <select name="state1" id="state1">
+                                                                    <option value="">Select</option>
+                                                                </select>
+                                                                <span id="7" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                City
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="city1" id="city1">
+                                                                </select>
+                                                                <span id="8" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Pincode
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Pin1" type="text" value="283206" id="Pin1">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="fl_text" colspan="3">
+                                                                <h3>
+                                                                    Local Address (
+                                                                    <span style="float: none;"><input id="add_check" type="checkbox" name="add_check"></span>If both address are same , please check it )
+                                                                </h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Address </td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="add2" rows="2" cols="20" id="add2" class="23">VIJAY NAGAR</textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                State
+                                                                <span> *</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="state2" id="state2">
+                                                                    <option value="">Select</option>
+                                                                </select>
+                                                                <span id="10" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                City
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="city2" id="city2">
+                                                                </select>
+                                                                <span id="11" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Pincode
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="pin2" type="text" value="206001" id="pin2">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <input type="submit" name="btn_update" value="Update" id="btn_update" class="but_upd">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="TabPanel2" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+                                <div class="">
+                                    <div class="">
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <div class="head clearfix">
+                                                    <div class="isw-grid"></div>
+                                                    <h1>High School </h1>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="table_my  table_old" id="Table2">
+                                                    <tbody>
+                                                        <tr style="display:none;">
+                                                            <td>
+                                                                Qualification
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="Qual" id="Qual">
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Year
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Year" type="text" id="Year">
+                                                                <span id="Validator4" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Subjects Offered
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Subject" type="text" id="Subject">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                School/College/University
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Board" type="text" id="Board">
+                                                                <span id="Validator5" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Percentage (%)
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Per" type="text" id="Per">
+                                                                <span id="Validator2" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Medium of Instruction</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="midiumInstruct" type="text" id="midiumInstruct">
+                                                                <span id="Validator18" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            </td>
+                                                            <td></td>
+                                                            <td>
+                                                                <input type="submit" name="_submit" value="Save" id="_submit">
+                                                                <input type="submit" name="_reset" value="Reset" id="_reset" class="but_res">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <table cellpadding="0" cellspacing="0" class="table_my " id="Table3">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div>
+                                                                    <table cellspacing="0" rules="all" class="mGrid2" border="1" id="" style="border-collapse:collapse;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th scope="col">Qualification </th>
+                                                                                <th scope="col">Year </th>
+                                                                                <th scope="col">Subject Offered</th>
+                                                                                <th scope="col">School/College/University</th>
+                                                                                <th scope="col">Percentage</th>
+                                                                                <th scope="col">Midium Instruct</th>
+                                                                                <th scope="col">Edit</th>
+                                                                                <th scope="col">Delete</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>10 th</td>
+                                                                                <td>2016</td>
+                                                                                <td>ENGLISH, HINDI, MATHS, SCIENCE,SST</td>
+                                                                                <td>CBSE</td>
+                                                                                <td>84</td>
+                                                                                <td>ENGLISH</td>
+                                                                                <td>
+                                                                                    <a id="_ctl02_lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>12 th</td>
+                                                                                <td>2020</td>
+                                                                                <td>ENGLISH, HINDI, BIOLOGY, PHYSICS, CHEMISTRY</td>
+                                                                                <td>U.P. BOARD</td>
+                                                                                <td>64</td>
+                                                                                <td>HINDI</td>
+                                                                                <td>
+                                                                                    <a id="_ctl03_lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="_ctl03_imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>B.A.</td>
+                                                                                <td>2013</td>
+                                                                                <td>ENGLISH LITERATURE PSYCHOLOGY DSST</td>
+                                                                                <td>AGRA UNIVERSITY</td>
+                                                                                <td>58</td>
+                                                                                <td>SELF</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>M.A.</td>
+                                                                                <td>NA</td>
+                                                                                <td>ENGLISH LITRATURE</td>
+                                                                                <td>CSJM UNIVERSITY</td>
+                                                                                <td>NA</td>
+                                                                                <td>ENGLISH</td>
+                                                                                <td>
+                                                                                    <a id="_ctl05_lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="btn_del" id="btn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>OTHER</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>
+                                                                                    <a id="btn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="_ctl06_imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <div class="head clearfix">
+                                                    <div class="isw-grid"></div>
+                                                    <h1>Intermediate</h1>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="table_my  table_old" id="Table11">
+                                                    <tbody>
+                                                        <tr style="display:none;">
+                                                            <td>
+                                                                Qualification
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="DropDownList1" id="DropDownList1">
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Year
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Year12" type="text" id="Year12">
+                                                                <span id="Validator22" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Subjects Offered
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Subject12" type="text" id="Subject12">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                School/College/University
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Board12" type="text" id="Board12">
+                                                                <span id="Validator23" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Percentage (%)
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Per12" type="text" id="Per12">
+                                                                <span id="Validator26" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Medium of Instruction</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="midiumInstruct12" type="text" id="midiumInstruct12">
+                                                                <span id="Validator27" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            </td>
+                                                            <td></td>
+                                                            <td>
+                                                                <input type="submit" name="_submit12" value="Save" id="_submit12">
+                                                                <input type="submit" name="P_reset12" value="Reset" id="P_reset12" class="but_res">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <table cellpadding="0" cellspacing="0" class="table_my " id="Table12">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div>
+                                                                    <table cellspacing="0" rules="all" class="mGrid2" border="1" id="12" style="border-collapse:collapse;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th scope="col">Qualification </th>
+                                                                                <th scope="col">Year </th>
+                                                                                <th scope="col">Subject Offered</th>
+                                                                                <th scope="col">School/College/University</th>
+                                                                                <th scope="col">Percentage</th>
+                                                                                <th scope="col">Midium Instruct</th>
+                                                                                <th scope="col">Edit</th>
+                                                                                <th scope="col">Delete</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>10 th</td>
+                                                                                <td>2016</td>
+                                                                                <td>ENGLISH, HINDI, MATHS, SCIENCE,SST</td>
+                                                                                <td>CBSE</td>
+                                                                                <td>84</td>
+                                                                                <td>ENGLISH</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>12 th</td>
+                                                                                <td>2020</td>
+                                                                                <td>ENGLISH, HINDI, BIOLOGY, PHYSICS, CHEMISTRY</td>
+                                                                                <td>U.P. BOARD</td>
+                                                                                <td>64</td>
+                                                                                <td>HINDI</td>
+                                                                                <td>
+                                                                                    <a id="12_ctl03_lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>B.A.</td>
+                                                                                <td>2013</td>
+                                                                                <td>ENGLISH LITERATURE PSYCHOLOGY DSST</td>
+                                                                                <td>AGRA UNIVERSITY</td>
+                                                                                <td>58</td>
+                                                                                <td>SELF</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>M.A.</td>
+                                                                                <td>NA</td>
+                                                                                <td>ENGLISH LITRATURE</td>
+                                                                                <td>CSJM UNIVERSITY</td>
+                                                                                <td>NA</td>
+                                                                                <td>ENGLISH</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>OTHER</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <div class="head clearfix">
+                                                    <div class="isw-grid"></div>
+                                                    <h1>Graduation </h1>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="table_my  table_old" id="Table13">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Qualification
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="QualG" id="QualG">
+                                                                    <option value="">Select</option>
+                                                                    <option value="22">B.A.</option>
+                                                                    <option value="23">B.Com</option>
+                                                                    <option value="24">B.Sc</option>
+                                                                    <option value="28">B.Sc Agri</option>
+                                                                    <option value="29">B.Tech</option>
+                                                                    <option value="30">B.Arch</option>
+                                                                    <option value="33">B.B.A</option>
+                                                                    <option value="39">B.H.M.C.</option>
+                                                                    <option value="40">B.C.J.</option>
+                                                                    <option value="41">B.C.A.</option>
+                                                                    <option value="42">B.D.S.</option>
+                                                                    <option value="44">B.Pharma</option>
+                                                                    <option value="52">B.P.T.</option>
+                                                                    <option value="53">D.Pharma</option>
+                                                                    <option value="55">B.H.M.S.</option>
+                                                                    <option value="57">Other</option>
+
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Year
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="YearG" type="text" id="YearG">
+                                                                <span id="Validator28" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Subjects Offered
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="SubjectG" type="text" id="SubjectG">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                School/College/University
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="BoardG" type="text" id="BoardG">
+                                                                <span id="Validator29" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Percentage (%)
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="PerG" type="text" id="PerG">
+                                                                <span id="Validator30" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Medium of Instruction</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="midiumInstructG" type="text" id="midiumInstructG">
+                                                                <span id="Validator31" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            </td>
+                                                            <td></td>
+                                                            <td>
+                                                                <input type="submit" name="_submitG" value="Save" id="_submitG">
+                                                                <input type="submit" name="P_resetG" value="Reset" id="P_resetG" class="but_res">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <table cellpadding="0" cellspacing="0" class="table_my " id="Table14">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+
+                                                                <div>
+                                                                    <table cellspacing="0" rules="all" class="mGrid2" border="1" id="G" style="border-collapse:collapse;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th scope="col">Qualification </th>
+                                                                                <th scope="col">Year </th>
+                                                                                <th scope="col">Subject Offered</th>
+                                                                                <th scope="col">School/College/University</th>
+                                                                                <th scope="col">Percentage</th>
+                                                                                <th scope="col">Midium Instruct</th>
+                                                                                <th scope="col">Edit</th>
+                                                                                <th scope="col">Delete</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>10 th</td>
+                                                                                <td>2016</td>
+                                                                                <td>ENGLISH, HINDI, MATHS, SCIENCE,SST</td>
+                                                                                <td>CBSE</td>
+                                                                                <td>84</td>
+                                                                                <td>ENGLISH</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>12 th</td>
+                                                                                <td>2020</td>
+                                                                                <td>ENGLISH, HINDI, BIOLOGY, PHYSICS, CHEMISTRY</td>
+                                                                                <td>U.P. BOARD</td>
+                                                                                <td>64</td>
+                                                                                <td>HINDI</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>B.A.</td>
+                                                                                <td>2013</td>
+                                                                                <td>ENGLISH LITERATURE PSYCHOLOGY DSST</td>
+                                                                                <td>AGRA UNIVERSITY</td>
+                                                                                <td>58</td>
+                                                                                <td>SELF</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>M.A.</td>
+                                                                                <td>NA</td>
+                                                                                <td>ENGLISH LITRATURE</td>
+                                                                                <td>CSJM UNIVERSITY</td>
+                                                                                <td>NA</td>
+                                                                                <td>ENGLISH</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>OTHER</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <div class="head clearfix">
+                                                    <div class="isw-grid"></div>
+                                                    <h1>Post Graduation </h1>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="table_my  table_old" id="Table15">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Qualification
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <select name="QualPG" id="QualPG">
+                                                                    <option value="">Select</option>
+                                                                    <option value="25">M.A.</option>
+                                                                    <option value="26">M.Com</option>
+                                                                    <option value="27">M.Sc</option>
+                                                                    <option value="34">M.B.A</option>
+                                                                    <option value="35">M.B.B.S</option>
+                                                                    <option value="36">M.D.</option>
+                                                                    <option value="43">L.L.B</option>
+                                                                    <option value="46">M.Lib</option>
+                                                                    <option value="47">M.Phil</option>
+                                                                    <option value="48">M.C.A.</option>
+                                                                    <option value="49">L.L.M</option>
+                                                                    <option value="50">M.Tech</option>
+                                                                    <option value="51">P.hd</option>
+                                                                    <option value="58">Other</option>
+
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Year
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="YearPG" type="text" id="YearPG">
+                                                                <span id="Validator32" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Subjects Offered
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="SubjectPG" type="text" id="SubjectPG">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                School/College/University
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="BoardPG" type="text" id="BoardPG">
+                                                                <span id="Validator33" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Percentage (%)
+                                                                <span>*</span>
+                                                            </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="PerPG" type="text" id="PerPG">
+                                                                <span id="Validator34" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Medium of Instruction</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="midiumInstructPG" type="text" id="midiumInstructPG">
+                                                                <span id="Validator35" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            </td>
+                                                            <td></td>
+                                                            <td>
+                                                                <input type="submit" name="_submitPG" value="Save" id="_submitPG">
+                                                                <input type="submit" name="P_resetPG" value="Reset" id="P_resetPG" class="but_res">
+                                                                <input type="submit" name="_skip4" value="Skip" id="_skip4" class="but_upd">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <table cellpadding="0" cellspacing="0" class="table_my " id="Table16">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div>
+                                                                    <table cellspacing="0" rules="all" class="mGrid2" border="1" id="PG" style="border-collapse:collapse;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th scope="col">Qualification </th>
+                                                                                <th scope="col">Year </th>
+                                                                                <th scope="col">Subject Offered</th>
+                                                                                <th scope="col">School/College/University</th>
+                                                                                <th scope="col">Percentage</th>
+                                                                                <th scope="col">Midium Instruct</th>
+                                                                                <th scope="col">Edit</th>
+                                                                                <th scope="col">Delete</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>10 th</td>
+                                                                                <td>2016</td>
+                                                                                <td>ENGLISH, HINDI, MATHS, SCIENCE,SST</td>
+                                                                                <td>CBSE</td>
+                                                                                <td>84</td>
+                                                                                <td>ENGLISH</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>12 th</td>
+                                                                                <td>2020</td>
+                                                                                <td>ENGLISH, HINDI, BIOLOGY, PHYSICS, CHEMISTRY</td>
+                                                                                <td>U.P. BOARD</td>
+                                                                                <td>64</td>
+                                                                                <td>HINDI</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>B.A.</td>
+                                                                                <td>2013</td>
+                                                                                <td>ENGLISH LITERATURE PSYCHOLOGY DSST</td>
+                                                                                <td>AGRA UNIVERSITY</td>
+                                                                                <td>58</td>
+                                                                                <td>SELF</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>M.A.</td>
+                                                                                <td>NA</td>
+                                                                                <td>ENGLISH LITRATURE</td>
+                                                                                <td>CSJM UNIVERSITY</td>
+                                                                                <td>NA</td>
+                                                                                <td>ENGLISH</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit" href="javascript:__doPostBack('lbtn_QID','')">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>OTHER</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="outer_fieldset">
+                                        <div class="fieldset12">
+                                            <div class="head clearfix">
+                                                <div class="isw-grid"></div>
+                                                <h1>Professional </h1>
+                                            </div>
+                                            <table cellpadding="0" cellspacing="0" class="table_my  table_old" id="Table6">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            Qualification
+                                                            <span>*</span>
+                                                        </td>
+                                                        <td>:</td>
+                                                        <td>
+                                                            <select name="QualPOG" id="QualPOG">
+                                                                <option value="">Select</option>
+                                                                <option value="31">B.Ed</option>
+                                                                <option value="32">M.Ed</option>
+                                                                <option value="59">Other</option>
+
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Year
+                                                            <span>*</span>
+                                                        </td>
+                                                        <td>:</td>
+                                                        <td>
+                                                            <input name="YearPOG" type="text" id="YearPOG">
+                                                            <span id="ValidatorYear" style="display:none;"> Required </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Subjects Offered
+                                                            <span>*</span>
+                                                        </td>
+                                                        <td>:</td>
+                                                        <td>
+                                                            <input name="SubjectPOG" type="text" id="SubjectPOG">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            School/College/University
+                                                            <span>*</span>
+                                                        </td>
+                                                        <td>:</td>
+                                                        <td>
+                                                            <input name="BoardPOG" type="text" id="BoardPOG">
+                                                            <span id="Validator16" style="display:none;"> Required </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Percentage (%)
+                                                            <span>*</span>
+                                                        </td>
+                                                        <td>:</td>
+                                                        <td>
+                                                            <input name="PerPOG" type="text" id="PerPOG">
+                                                            <span id="Validator17" style="display:none;"> Required </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Medium of Instruction</td>
+                                                        <td>:</td>
+                                                        <td>
+                                                            <input name="InstructPOG" type="text" id="midiumInstructPOG">
+                                                            <span id="Validator19" style="display:none;"> Required </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        </td>
+                                                        <td></td>
+                                                        <td>
+                                                            <input type="submit" name="P_submit" value="Save" id="P_submit">
+                                                            <input type="submit" name="P_reset" value="Reset" id="P_reset" class="but_res">
+                                                            <input type="submit" name="_skip5" value="Skip" id="_skip5" class="but_upd">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="outer_fieldset">
+                                        <div class="fieldset12">
+                                            <table cellpadding="0" cellspacing="0" class="table_my " id="Table7">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                <table cellspacing="0" rules="all" class="mGrid2" border="1" id="P" style="border-collapse:collapse;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th scope="col">Qualification </th>
+                                                                            <th scope="col">Year </th>
+                                                                            <th scope="col">Subject Offered</th>
+                                                                            <th scope="col">School/College/University</th>
+                                                                            <th scope="col">Percentage</th>
+                                                                            <th scope="col">Edit</th>
+                                                                            <th scope="col">Delete</th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>10 th</td>
+                                                                            <td>2016</td>
+                                                                            <td>ENGLISH, HINDI, MATHS, SCIENCE,SST</td>
+                                                                            <td>CBSE</td>
+                                                                            <td>84</td>
+                                                                            <td>
+                                                                                <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>12 th</td>
+                                                                            <td>2020</td>
+                                                                            <td>ENGLISH, HINDI, BIOLOGY, PHYSICS, CHEMISTRY</td>
+                                                                            <td>U.P. BOARD</td>
+                                                                            <td>64</td>
+                                                                            <td>
+                                                                                <a id="lbtn_QID" title="Click here to Edit" href="javascript:__doPostBack('lbtn_QID','')">Edit</a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>B.A.</td>
+                                                                            <td>2013</td>
+                                                                            <td>ENGLISH LITERATURE PSYCHOLOGY DSST</td>
+                                                                            <td>AGRA UNIVERSITY</td>
+                                                                            <td>58</td>
+                                                                            <td>
+                                                                                <a id="lbtn_QID" title="Click here to Edit" href="javascript:__doPostBack('lbtn_QID','')">Edit</a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>M.A.</td>
+                                                                            <td>NA</td>
+                                                                            <td>ENGLISH LITRATURE</td>
+                                                                            <td>CSJM UNIVERSITY</td>
+                                                                            <td>NA</td>
+                                                                            <td>
+                                                                                <a id="lbtn_QID" title="Click here to Edit" href="javascript:__doPostBack('lbtn_QID','')">Edit</a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>OTHER</td>
+                                                                            <td>NA</td>
+                                                                            <td>NA</td>
+                                                                            <td>NA</td>
+                                                                            <td>NA</td>
+                                                                            <td>
+                                                                                <a id="lbtn_QID" title="Click here to Edit">Edit</a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="TabPanel4" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+                                <div class="">
+                                    <div class="">
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <div class="head clearfix">
+                                                    <div class="isw-grid"></div>
+                                                    <h1>Work Experience </h1>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="table_my table_old" id="Table4">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>&nbsp;Name of School/Institution</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="OrgName" type="text" id="OrgName">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Designation &amp; Assignments</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Designation" type="text" id="Designation">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>From Date </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="JoinDate" type="text" id="JoinDate">
+                                                                <span id="Validator12" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>To Date </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="EndDate" type="text" id="EndDate">
+                                                                <span id="Validator13" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Subject/Class Taught</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="SubTeach" type="text" id="SubTeach">
+                                                                <span id="Validator3" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Experience(Month) </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Exp" type="text" id="Exp">
+                                                                <span id="Validator6" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            </td>
+                                                            <td></td>
+                                                            <td>
+                                                                <input type="submit" name="btn_JEmpExp_submit" value="Save" id="btn_JEmpExp_submit">
+                                                                <input type="submit" name="btn_JEmpExp_reset" value="Reset" id="btn_JEmpExp_reset" class="but_res">
+                                                                <input type="submit" name="btn_JEmpExp_skip" value="Skip" id="btn_JEmpExp_skip" class="but_upd">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <table cellpadding="0" cellspacing="0" class="table_my" id="Table5">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div>
+                                                                    <table cellspacing="0" rules="all" class="mGrid2" border="1" id="gd_JEmpExp" style="border-collapse:collapse;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th scope="col">Organization Name </th>
+                                                                                <th scope="col">Designation </th>
+                                                                                <th scope="col">Experience(Month) </th>
+                                                                                <th scope="col">Subject Tought </th>
+                                                                                <th scope="col">Join Date</th>
+                                                                                <th scope="col">End Date</th>
+                                                                                <th scope="col">Edit</th>
+                                                                                <th scope="col">Delete</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>FRESHER</td>
+                                                                                <td>NA</td>
+                                                                                <td>na</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>NA</td>
+                                                                                <td>
+                                                                                    <a id="btn_EID" title="Click here to Edit" href="javascript:__doPostBack('lbtn_EID','')">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <div class="head clearfix">
+                                                    <div class="isw-grid"></div>
+                                                    <h1>Total work experience (in years) </h1>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="table_my table_old" id="Table17">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Teaching</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="expTeacher" type="text" value="0" id="expTeacher">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Administration</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="expAdmin" type="text" value="0" id="expAdmin">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Any other </td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="expAnyOther" type="text" value="0" id="expAnyOther">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>
+                                                                <input type="submit" name="btn_JEmpTotExp_submit" value="Update" id="btn_JEmpTotExp_submit">
+                                                                <input type="submit" name="btn_JEmpTotExp_skip" value="Skip" id="btn_JEmpTotExp_skip" class="but_upd">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <div class="head clearfix">
+                                                    <div class="isw-grid"></div>
+                                                    <h1>SEMINAR / WORKSHOP/ INSET Attended Detail </h1>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="table_my table_old" id="Table9">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>SEMINAR/WORKSHOP/ INSET Attended&nbsp;</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="seminarAtt" type="text" id="seminarAtt">
+                                                                <span id="Validator24" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Duration</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Duration" type="text" id="Duration">
+                                                                <span id="Validator25" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dates</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Dates" type="text" id="Dates">
+                                                                <span id="Validator20" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Description</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="Description" type="text" id="Description">
+                                                                <span id="Validator21" style="display:none;"> Required </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            </td>
+                                                            <td></td>
+                                                            <td>
+                                                                <input type="submit" name="btn_workshop" value="Save" id="btn_workshop">
+                                                                <input type="submit" name="btn_workshop_reset" value="Reset" id="btn_workshop_reset" class="but_res">
+                                                                <input type="submit" name="btn_workshop_skip" value="Skip" id="btn_workshop_skip" class="but_upd">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <table cellpadding="0" cellspacing="0" class="table_my" id="Table10">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div>
+                                                                    <table cellspacing="0" rules="all" class="mGrid2" border="1" id="workshop" style="border-collapse:collapse;">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th scope="col">Seminar / Workshop </th>
+                                                                                <th scope="col">Duration </th>
+                                                                                <th scope="col">Dates </th>
+                                                                                <th scope="col">Description </th>
+                                                                                <th scope="col">Edit</th>
+                                                                                <th scope="col">Delete</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>&nbsp;</td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td>
+                                                                                    <a id="lbtn_EID" title="Click here to Edit">Edit</a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="image" name="imgbtn_del" id="imgbtn_del" title="Click here to delete this record" src="../App_Images/del.jpg">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="TabPanel5" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+                                <div class="">
+                                    <div class="">
+                                        <div class="outer_fieldset">
+                                            <div class="fieldset12">
+                                                <div class="head clearfix">
+                                                    <div class="isw-grid"></div>
+                                                    <h1 style="color: #f31313;">Please fill below data (if you have any..) </h1>
+                                                </div>
+                                                <table cellpadding="0" cellspacing="0" class="table_my table_old" id="Table8">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <h3>
+                                                                    Mention the areas, (To be filled in by those applying for teaching job) other than academics in which you can contribute to the growth of the school (Co-curricular activities)
+                                                                </h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mention the areas (A)</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <textarea name="mentionAreaA" rows="2" cols="20" id="mentionAreaA"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mention the areas (B)</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <textarea name="mentionAreaB" rows="2" cols="20" id="mentionAreaB"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <h3>
+                                                                    Mention the assignments/responsibilities which you have handled other than teaching:
+                                                                </h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mention the assignments (A)</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="mentionAssigA" rows="2" cols="20" id="mentionAssigA"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mention the assignments (B)</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="mentionAssigB" rows="2" cols="20" id="mentionAssigB"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Write a few lines on your views on “Work Ethics”: </td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="wotkEthic" rows="2" cols="20" id="wotkEthic"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                <h3>Any other information about your achievement in the field of </h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Academics</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="achAcadmic" rows="2" cols="20" id="achAcadmic"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Research</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="achResearch" rows="2" cols="20" id="achResearch"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sports</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="achSport" rows="2" cols="20" id="achSport"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cultural Activities</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="achCultural" rows="2" cols="20" id="achCultural"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>If selected, how much time would you need to join?</td>
+                                                            <td>:</td>
+                                                            <td>
+                                                                <input name="joinTime" type="text" id="joinTime">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mention any course/ Studies you are pursuing at present. Will you need any leave on this account?</td>
+                                                            <td>:</td>
+                                                            <td>
+<textarea name="leavestudy" rows="2" cols="20" id="leavestudy"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                            </td>
+                                                            <td></td>
+                                                            <td>
+                                                                <input type="submit" name="btn_other" value="Save" id="btn_other">
+                                                                <input type="submit" name="Button3" value="Reset" id="Button3" class="but_res">&nbsp;
+                                                                <input type="submit" name="btn_Other_skip" value="Skip" id="btn_Other_skip" class="but_upd">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="TabPanel6" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+                                <div class="">
+                                    <div class="">
+                                        <table cellpadding="0" cellspacing="0" class="table_my table_old" id="Table18">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <h3>Document Attached </h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bio Data</td>
+                                                    <td>:</td>
+                                                    <td>
+                                                        <select name="CV" id="CV">
+                                                            <option selected="selected" value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Document</td>
+                                                    <td>:</td>
+                                                    <td>
+                                                        <select name="DOC" id="DOC">
+                                                            <option selected="selected" value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IDProof</td>
+                                                    <td>:</td>
+                                                    <td>
+                                                        <select name="IDProof" id="IDProof">
+                                                            <option selected="selected" value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trained Graduate</td>
+                                                    <td>:</td>
+                                                    <td>
+                                                        <select name="Trained" id="Trained">
+                                                            <option value="Yes">Yes</option>
+                                                            <option selected="selected" value="No">No</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Photo</td>
+                                                    <td>:</td>
+                                                    <td>
+                                                        <select name="Photo1" id="Photo1">
+                                                            <option selected="selected" value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>
+                                                        <input type="submit" name="btn_docSave" value="Save" id="btn_docSave">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="TabPanel3" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+
+                                <div class="">
+                                    <div class="">
+                                        <table cellpadding="0" cellspacing="0" class="table_my table_old" id="Table19">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <h3>Employee Account Details  </h3>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+
+
+
+                                                    <td>
+                                                        Payment Mode
+                                                    </td>
+                                                    <td>
+                                                        :
+                                                    </td>
+                                                    <td>
+                                                        <select name="PMode" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$TabContainer1$TabPanel3$PMode\',\'\')', 0)" id="PMode">
+                                                            <option selected="selected" value="Cash">Cash</option>
+                                                            <option value="Cheque">Cheque</option>
+                                                            <option value="Transfer">Transfer</option>
+
+                                                        </select>
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td>
+                                                        Account No
+                                                        <span>*</span>
+                                                    </td>
+                                                    <td>
+                                                        :
+                                                    </td>
+                                                    <td>
+                                                        <input name="AccNo" type="text" id="AccNo">
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td>
+                                                        IFSC Code
+                                                        <span> *</span>
+                                                    </td>
+                                                    <td>
+                                                        :
+                                                    </td>
+                                                    <td>
+                                                        <input name="IFSC" type="text" id="IFSC">
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td>
+                                                        Bank Name
+                                                    </td>
+                                                    <td>
+                                                        :
+                                                    </td>
+                                                    <td>
+                                                        <select name="BankName" id="BankName">
+                                                            <option value="Select">Select</option>
+                                                            <option value="Axis Bank">Axis Bank</option>
+                                                            <option value="Bank of Baroda">Bank of Baroda</option>
+                                                            <option value="ICICI Bank">ICICI Bank</option>
+
+                                                        </select>
+
+                                                    </td>
+
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        Branch Address
+                                                    </td>
+                                                    <td>
+                                                        :
+                                                    </td>
+                                                    <td>
+                                                        <textarea name="Branch" rows="2" cols="20" id="Branch"></textarea>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>
+                                                        <input type="submit" name="btn_Couremark" value="Save" id="btn_Couremark">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="other_opt_div" class="span3">
+
+                <div class="outer_fieldset  other_opt">
+                    <div class="fieldset2">
+
+
+                        <table cellpadding="0" cellspacing="0" class="table_my " id="Table1">
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a> Add/Edit Interviewee Image                  </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="db_img">
+                                        <img id="Image1" src="../admin/upload/EmpInfo/EmpInfo_pic_up_IMG-20240428-WA0019-min.jpg">
+
+
+
+                                        <br>
+                                        <br>
+
+
+
+
+
+
+
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <a>Update  Image</a>
+                                        <br>
+                                        <a>Less Than 100 KB</a>
+                                        <br>
+                                        <br>
+
+                                        <input type="file" name="FileUpload1" id="FileUpload1" onchange="javascript : return validImage(this)">
+                                        <span id="Validator14" style="display:none;">Select image</span>
+                                        <br>
+                                        <input type="submit" name="btn_imageupdate" value="Image Update" id="btn_imageupdate">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Current Status:
+                                        <span id="lblstatus" class="lbl_g">Active</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>  </td>
+                                </tr>
+                                <tr>
+                                    <td>  &nbsp;</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</form>
