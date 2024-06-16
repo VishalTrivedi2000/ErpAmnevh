@@ -10,7 +10,7 @@ namespace AMNEVH.Controllers
 {
     public class EmployeeController : Controller
     {
-        // GET: Employee
+        // GET: Employee good
         BusinessLayer businessLayer;
         public EmployeeController()
         {
