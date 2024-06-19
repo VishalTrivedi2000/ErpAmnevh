@@ -1,9 +1,8 @@
 ﻿using AMNEVH.Models;
+using AMNEVH.Models.UserEntities;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace AMNEVH.Controllers
@@ -200,14 +199,91 @@ namespace AMNEVH.Controllers
         }
         public ActionResult EmpInfo(string id)
         {
+            ViewBag.stateList = businessLayer.getState();
+            ViewBag.lstDepartment = businessLayer.getDepartment();
+
+            Employee emp = businessLayer.getEmployee(id);
+            emp.highSchool = businessLayer.getHighSchool(id);
+            ViewBag.lstDesignation = businessLayer.getDesignation(emp.DesigID==null?"0":emp.DeptID);
+
+
+            //if (Session["EMPID"] != null)
+            //{
 
 
 
+            //    //cs.str = "select  * from EmpResignation   where status='3'  and EmpResignation.EMPID='" + Session["EMPID"].ToString() + "' and  ssid='" + Session["ssid"].ToString() + "'  ";
 
 
+            //    //dt = cs.GetDataTable(cs.str);
+            //    //if (dt.Rows.Count > 0)
+            //    //{
+            //    //    Response.Redirect("homeemp.aspx");
+            //    //}
 
 
-            return View();
+            //    //else { }
+
+               
+            //        other_opt_div.Visible = false;
+            //        state_fill(); 
+            //    Dept_fill();
+            //        //Desig_fill();
+            //        JEmpQualification_fillGrid();
+            //        JEmpQualification_12th_fillGrid();
+            //        JEmpQualification_G_fillGrid();
+            //        JEmpQualification_PG_fillGrid();
+            //    QualPG_fill();
+            //        Qual_fill(); 
+            //    JEmpExp_fillGrid();
+            //    PQual_fill();
+            //        PQual_fill();
+            //    JEmpWorkshop_fillGrid();
+            //        JEmpQualificationP_fillGrid();
+            //        //TabPanel2.Enabled = false;
+            //        //TabPanel3.Enabled = false;
+            //        if (Request.QueryString["id"] != null)
+            //        {
+                       
+            //            EmpInfo_fill();
+            //            MStatus_check();
+            //            pf_check();
+            //            esi_check();
+            //            // TabContainer1.ActiveTab = TabContainer1.Tabs[0];
+            //            fillNews();
+            //            cs.str = "select status1,status2,status3,status4,status5 from EmpInfo where EMPID='" + Session["EMPID"].ToString() + "'";
+            //            dt = cs.GetDataTable(cs.str);
+            //            if (dt.Rows.Count > 0)
+            //            {
+            //                if (dt.Rows[0][0].ToString() == "0")
+            //                {
+            //                    TabContainer1.ActiveTab = TabContainer1.Tabs[0];
+            //                }
+            //                else if (Convert.ToInt32(dt.Rows[0][1].ToString()) < 5)
+            //                {
+            //                    TabContainer1.ActiveTab = TabContainer1.Tabs[1];
+            //                }
+            //                else if (Convert.ToInt32(dt.Rows[0][2].ToString()) < 3)
+            //                {
+            //                    TabContainer1.ActiveTab = TabContainer1.Tabs[2];
+            //                }
+            //                else if (dt.Rows[0][3].ToString() == "0")
+            //                {
+            //                    TabContainer1.ActiveTab = TabContainer1.Tabs[3];
+            //                }
+            //                else if (dt.Rows[0][4].ToString() == "0")
+            //                {
+            //                    TabContainer1.ActiveTab = TabContainer1.Tabs[4];
+            //                }
+            //            }
+                   
+            //    }
+            //}
+            //else
+            //{
+            //    Response.Redirect("../Default.aspx");
+            //}
+            return View(emp);
         }
     }
 }

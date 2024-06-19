@@ -1,21 +1,33 @@
-﻿
+﻿@model AMNEVH.Models.UserEntities.Employee
 @{
     ViewBag.Title = "EmpInfo";
     Layout = "~/Views/Shared/_LayoutEmployee.cshtml";
 }
+<script src="~/Content/customJS/binder.js" defer></script>
+<style>
+    .tab-active {
+        background: #012e57 !important;
+    }
 
+    .tab {
+        background: #4c6878;
+        padding: 8px;
+        color: white;
+        cursor:pointer;
+        border-radius: 5px;
+    }
+</style>
 <form method="post" id="aspnetForm" enctype="multipart/form-data">
     <div class="workplace">
         <div class="card">
             <div class="card-header">
-        <div class="row">
-            <div class="col-sm12">
-                <h1>
-                    Employee Info Details
-                </h1>
-            </div>
-        </div>
-
+                <div class="">
+                    <div class="" style=" text-align: center; text-decoration: underline; background: #012e57; border: 1px solid #4c6878; border-radius: 5px;color:white;">
+                        <h1>
+                            Employee Info Details
+                        </h1>
+                    </div>
+                </div>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -25,438 +37,425 @@
                 </div>
             </div>
         </div>
+        <br />
         <div class="row-fluid">
             <div id="UpdatePanel1">
                 <div class="span9">
                     <div id="TabContainer1" style="font-weight: normal; width: 100%; visibility: visible;" class="ajax__tab_container ajax__tab_default">
                         <div id="header" class="ajax__tab_header">
-                            <span id="tab" class="ajax__tab_active">
-                                <span class="ajax__tab_outer">
-                                    <span class="ajax__tab_inner">
-                                        <span class="ajax__tab_tab" id="__tab_TabPanel1">
-                                            General
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                            <span id="tab">
-                                <span class="ajax__tab_outer">
-                                    <span class="ajax__tab_inner">
-                                        <span class="ajax__tab_tab" id="__tab_TabPanel2">
-                                            Qualification
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                            <span id="tab">
-                                <span class="ajax__tab_outer">
-                                    <span class="ajax__tab_inner">
-                                        <span class="ajax__tab_tab" id="__tab_TabPanel4">
-                                            Work Experience
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                            <span id="TabPanel5_tab">
-                                <span class="ajax__tab_outer">
-                                    <span class="ajax__tab_inner">
-                                        <span class="ajax__tab_tab" id="__tab_TabPanel5">
-                                            Other
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                            <span id="TabPanel6_tab">
-                                <span class="ajax__tab_outer">
-                                    <span class="ajax__tab_inner">
-                                        <span class="ajax__tab_tab" id="__tab_TabPanel6">
-                                            Document Enclose
-                                        </span>
-                                    </span>
-                                </span>
-                            </span>
-                            <span id="TabPanel3_tab">
-                                <span class="ajax__tab_outer">
-                                    <span class="ajax__tab_inner">
-                                        <span class="ajax__tab_tab" id="__tab_TabPanel3">Bank Detail</span>
-                                    </span>
-                                </span>
-                            </span>
+                            <span class="tab tab-active" data-target="TabPanel1_tab">General</span>
+                            <span class="tab" data-target="TabPanel2_tab">Qualification</span>
+                            <span class="tab" data-target="TabPanel3_tab">Work Experience</span>
+                            <span class="tab" data-target="TabPanel4_tab">Other</span>
+                            <span class="tab" data-target="TabPanel5_tab">Document Enclose</span>
+                            <span class="tab" data-target="TabPanel6_tab">Bank Detail</span>
                         </div>
                         <div id="body" class="ajax__tab_body">
-                            <div id="TabPanel1" class="ajax__tab_panel" style="visibility: visible;">
+                            <div id="TabPanel1_tab" class="ajax__tab_panel" style="visibility: visible;">
                                 <div class="">
                                     <div class="">
                                         <div class="outer_fieldset">
                                             <div class="fieldset12">
-                                                <div class="head clearfix">
+                                                <div class="head clearfix text-center">
                                                     <div class="isw-grid"></div>
-                                                    <h1>Employee Details </h1>
+                                                    <h1 style=" font-size: 1.5rem;">Employee Details </h1>
                                                 </div>
-                                                <table cellpadding="0" cellspacing="0" class="table_my table_old" id="" width="100%">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                Department
-                                                                <span>*</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <select name="DeptID" id="DeptID">
-                                                                    <option value="">Select</option>
-                                                                    <option value="DT1">ACADEMICS</option>
-                                                                    <option value="DT2">ADMINISTRATIVE</option>
-                                                                    <option value="DT7">FINANCE</option>
-                                                                    <option selected="selected" value="DT5">HR</option>
-                                                                    <option value="DT6">IT &amp; MEDIA</option>
-                                                                    <option value="DT8">LEADERSHIP COUNCIL</option>
-                                                                    <option value="DT4">R &amp; D</option>
-                                                                    <option value="DT10">SUBORDINATE</option>
-                                                                    <option value="DT3">TRANSPORT</option>
-
-                                                                </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                Designation
-                                                                <span>*</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <select name="DesigID" id="DesigID">
-                                                                    <option value="">Select</option>
-                                                                    <option value="DN069">CLERK (HR-STUDENT AFFAIRS))</option>
-                                                                    <option selected="selected" value="DN068">FRONT DESK EXECUTIVE</option>
-                                                                    <option value="DN096">HEAD CLERK (HR-STUDENT AFFAIRS)</option>
-                                                                    <option value="DN067">HR &amp; ADMISSION HEAD</option>
-                                                                    <option value="DN071">TRAINING HEAD</option>
-
-                                                                </select>
-                                                                <span id="15" style="display:none;">Select</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3">
-                                                                <h3>General Information </h3>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                Name&nbsp;
-                                                                <span>*</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="Name" type="text" value="SAKSHI" id="Name">
-                                                                <span id="9" style="display:none;">Required</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                Father's Name / Husband Name
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="FName" type="text" value="AVINASH SINGH" id="FName">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                Mobile No. 1
-                                                                <span>*</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="mobile1" type="text" value="9411869671" id="mobile1" autocomplete="off" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;">
-                                                                <span id="1" style="display:none;">Required</span>
-                                                                <div style="width:100%">
-                                                                    <span><span id="mobile1_lbl" display="Dynamic"></span></span>
+                                                <div class="row">
+                                                    <div class="col-sm-1"></div>
+                                                    <div class="col-sm-10">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Department
+                                                                        <span class="parsley-required">*</span> :
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        @Html.DropDownListFor(model => Model.DeptID, (IEnumerable<SelectListItem>)ViewBag.lstDepartment, new { @id = "DeptID", @class = "form-control", @onchange = "BindDesig(this,'DesigID')" })
+                                                                    </div>
                                                                 </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Mobile No. 2</td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="Mobile2" type="text" value="8171127204" id="Mobile2" autocomplete="off" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                Date Of Birth
-                                                                <span>*</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="DOB" type="text" value="15/07/2001" id="DOB" autocomplete="off">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Email </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="Email" type="text" value="MANJUSINGH817100@GMAIL.COM" id="Email">
-                                                                <span id="5" title="Invalid Email" style="display:none;"> Invalid Email </span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                Sex
-                                                                <span> *</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <table id="Sex">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <input id="Sex_0" type="radio" name="Sex" value="Male">
-                                                                                <label for="Sex_0">Male</label>
-                                                                            </td>
-                                                                            <td>
-                                                                                <input id="Sex_1" type="radio" name="Sex" value="Female" checked="checked">
-                                                                                <label for="Sex_1">Female</label>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Cast</td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <select name="Cast" id="Cast">
-                                                                    <option value="General">General</option>
-                                                                    <option value="OBC">OBC</option>
-                                                                    <option value="SC">SC</option>
-                                                                    <option value="ST">ST</option>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Designation
+                                                                        <span class="parsley-required">*</span> :
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        @Html.DropDownListFor(model => Model.DesigID, (IEnumerable<SelectListItem>)ViewBag.lstDesignation, new { @id = "DesigID", @class = "form-control", @onchange = "BindDesig(this,'DesigID')" })
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 text-center">
+                                                                        <span style=" text-align: center; width: 100%; text-shadow: 1px 0px #710f0f;">     General Information</span>
 
-                                                                </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3">
-                                                                <h3>Marital Status </h3>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                Marrital Status
-                                                                <span> *</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <table id="MStatus">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <input id="MStatus_0" type="radio" name="MStatus" value="Married">
-                                                                                <label for="MStatus_0">Married</label>
-                                                                            </td>
-                                                                            <td>
-                                                                                <input id="MStatus_1" type="radio" name="MStatus" value="Single" checked="checked">
-                                                                                <label for="MStatus_1">Single</label>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Spouse Name</td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="spouseName" type="text" value="NA" id="spouseName">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3">
-                                                                <h3>Details of Children </h3>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>No. of Children </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="Child" type="text" value="NA" id="Child">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3">
-                                                                <h3>
-                                                                    Give two reference of permanent residents of
-                                                                    <city> and having their own house  </city>
-                                                                </h3>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Name (A)</td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="refNameA" type="text" value="SHREHEE SHAKYA" id="refNameA">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Phone/Mobile</td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="refMobA" type="text" value="6386250501" id="refMobA">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Address</td>
-                                                            <td>:</td>
-                                                            <td>
-<textarea name="reAddressA" rows="2" cols="20" id="reAddressA" class="23">TULSI NAGAR ETAWAH</textarea>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ho w do you know the person and since how long ?</td>
-                                                            <td>:</td>
-                                                            <td>
-<textarea name="refKnowA" rows="2" cols="20" id="refKnowA" class="23">SINCE 7 YEAERS</textarea>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Name (B)</td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="refNameB" type="text" value="SUNAINA" id="refNameB">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Phone/Mobile</td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="refMobB" type="text" value="7668979396" id="refMobB">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Address</td>
-                                                            <td>:</td>
-                                                            <td>
-<textarea name="reAddressB" rows="2" cols="20" id="reAddressB" class="23">VAIBHAV BIHAR</textarea>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ho w do you know the person and since how long ?</td>
-                                                            <td>:</td>
-                                                            <td>
-<textarea name="refKnowB" rows="2" cols="20" id="refKnowB" class="23">5 YEARS</textarea>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3">
-                                                                <h3>Permanent Address </h3>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Address </td>
-                                                            <td>:</td>
-                                                            <td>
-<textarea name="add1" rows="2" cols="20" id="add1" class="23">VILLAGE NARKHI</textarea>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                State
-                                                                <span> *</span>
-                                                            </td>
-                                                            <td>::</td>
-                                                            <td>
-                                                                <select name="state1" id="state1">
-                                                                    <option value="">Select</option>
-                                                                </select>
-                                                                <span id="7" style="display:none;"> Required </span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                City
-                                                                <span>*</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <select name="city1" id="city1">
-                                                                </select>
-                                                                <span id="8" style="display:none;"> Required </span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                Pincode
-                                                                <span>*</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="Pin1" type="text" value="283206" id="Pin1">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="fl_text" colspan="3">
-                                                                <h3>
-                                                                    Local Address (
-                                                                    <span style="float: none;"><input id="add_check" type="checkbox" name="add_check"></span>If both address are same , please check it )
-                                                                </h3>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Address </td>
-                                                            <td>:</td>
-                                                            <td>
-<textarea name="add2" rows="2" cols="20" id="add2" class="23">VIJAY NAGAR</textarea>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                State
-                                                                <span> *</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <select name="state2" id="state2">
-                                                                    <option value="">Select</option>
-                                                                </select>
-                                                                <span id="10" style="display:none;"> Required </span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                City
-                                                                <span>*</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <select name="city2" id="city2">
-                                                                </select>
-                                                                <span id="11" style="display:none;"> Required </span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                Pincode
-                                                                <span>*</span>
-                                                            </td>
-                                                            <td>:</td>
-                                                            <td>
-                                                                <input name="pin2" type="text" value="206001" id="pin2">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="3">
-                                                                <input type="submit" name="btn_update" value="Update" id="btn_update" class="but_upd">
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Name
+                                                                        <span>*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="Name" class="form-control" type="text" value="@Model.Name" id="Name">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Father's Name / Husband Name
+                                                                        <span class="parsley-required">*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="FName" class="form-control" type="text" value="@Model.FName" id="FName">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Mobile No. 1
+                                                                        <span class="parsley-required">*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="mobile1" class="form-control" type="text" value="@Model.mobile1" id="mobile1" autocomplete="off">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Mobile No. 2
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="Mobile2" class="form-control" type="text" value="@Model.Mobile2" id="Mobile2" autocomplete="off">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Date Of Birth
+                                                                        <span class="parsley-required">*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="DOB" class="form-control" type="text" value="@Model.DOB" id="DOB" autocomplete="off">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Email
+                                                                        <span class="parsley-required">*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="Email" class="form-control" type="text" value="@Model.Email" id="Email">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Sex
+                                                                        <span class="parsley-required">*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        @if (Model.Sex == "Male")
+                                                                        {
+                                                                            <input id="Sex_0" type="radio" name="Sex" value="Male" checked="checked">
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <input id="Sex_0" type="radio" name="Sex" value="Male">
+
+                                                                        }
+                                                                        <label for="Sex_0">Male</label>
+                                                                        @if (Model.Sex == "Female")
+                                                                        {
+                                                                            <input id="Sex_1" type="radio" name="Sex" value="Female" checked="checked">
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <input id="Sex_1" type="radio" name="Sex" value="Female" checked="checked">
+                                                                        }
+                                                                        <label for="Sex_1">Female</label>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Cast
+                                                                        <span class="parsley-required">*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <select name="Cast" id="Cast" class="form-control">
+                                                                            <option value="General">General</option>
+                                                                            <option value="OBC">OBC</option>
+                                                                            <option value="SC">SC</option>
+                                                                            <option value="ST">ST</option>
+
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 text-center">
+                                                                        <span style=" text-align: center; width: 100%; text-shadow: 1px 0px #710f0f;"> Marital Status</span>
+                                                                    </div>
+
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Marital Status
+                                                                        <span class="parsley-required">*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        @if (Model.MStatus == "Married")
+                                                                        {
+                                                                            <input id="MStatus_0" type="radio" name="MStatus" value="Married" checked="checked">
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <input id="MStatus_0" type="radio" name="MStatus" value="Married">
+                                                                        }
+                                                                        <label for="MStatus_0">Married</label>
+                                                                        @if (Model.MStatus == "Single")
+                                                                        {
+                                                                            <input id="MStatus_1" type="radio" name="MStatus" value="Single" checked="checked">
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <input id="MStatus_1" type="radio" name="MStatus" value="Single">
+                                                                        }
+                                                                        <label for="MStatus_1">Single</label>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Spouse Name
+                                                                        <span>*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="spouseName" class="form-control" type="text" value="@Model.spouseName" id="spouseName">
+                                                                    </div>
+
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            Details of Children
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        No. of Children
+                                                                        <span>*</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="Child" class="form-control" type="text" value="@Model.Child" id="Child">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 text-center">
+
+                                                                        <span style=" text-align: center; width: 100%; text-shadow: 1px 0px #710f0f;">
+                                                                            Give two reference of permanent residents of
+                                                                            <city> and having their own house  </city>
+                                                                        </span>
+
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Name (A)
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="refNameA" class="form-control" type="text" value="@Model.refNameA" id="refNameA">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Phone/Mobile
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="refMobA" class="form-control" type="text" value="@Model.refMobA" id="refMobA">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Address
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <textarea name="reAddressA" class="form-control 23" rows="2" cols="20" id="reAddressA">@Model.reAddressA</textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Ho w do you know the person and since how long ?
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+
+<textarea name="refKnowA" rows="2" cols="20" id="refKnowA" class="form-control 23">@Model.refKnowA</textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Name (B)
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="refNameB" class="form-control" type="text" value="@Model.refNameB" id="refNameB">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Phone/Mobile
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="refMobB" class="form-control" type="text" value="@Model.refMobB" id="refMobB">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Address
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <textarea name="reAddressB" class="form-control 23" rows="2" cols="20" id="reAddressB">@Model.reAddressB</textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        How do you know the person and since how long ?
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <textarea name="refKnowB" class="form-control 23" rows="2" cols="20" id="refKnowB">@Model.refKnowB</textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        Permanent Address
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Address
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <textarea name="Add1" rows="2" cols="20" id="Add1" class="form-control 23">@Model.Add1</textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        State
+                                                                        <span class="parsley-required"> *</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        @Html.DropDownListFor(model => Model.State1, (IEnumerable<SelectListItem>)ViewBag.stateList, new { @id = "State1", @class = "form-control", @onchange = "BindCity(this,'City1')" })
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        City
+                                                                        <span class="parsley-required"> *</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <select name="City1" id="City1" class="form-control">
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Pincode
+                                                                        <span class="parsley-required"> *</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="Pin1" class="form-control" type="text" value="@Model.Pin1" id="Pin1">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 text-center">
+                                                                        <span style=" text-align: center; width: 100%; text-shadow: 1px 0px #710f0f;">
+                                                                            Local Address (
+                                                                            <span style="float: none;"><input id="add_check" type="checkbox" name="add_check"></span>If both address are same, please check it)
+                                                                        </span>
+
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Address
+                                                                        <span class="parsley-required"> *</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <textarea name="Add2" rows="2" cols="20" id="Add2" class="form-control 23">@Model.Add2</textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        State
+                                                                        <span class="parsley-required"> *</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        @Html.DropDownListFor(model => Model.State2, (IEnumerable<SelectListItem>)ViewBag.stateList, new { @id = "State2", @class = "form-control", @onchange = "BindCity(this,'City2')" })
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        City
+                                                                        <span class="parsley-required"> *</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <select name="City2" id="City2" class="form-control">
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        Pincode
+                                                                        <span class="parsley-required"> *</span>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <input name="PIN2" type="text" class="form-control" value="@Model.PIN2" id="PIN2">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                                <div class="row">
+                                                                    <div class="col-sm-12">
+                                                                        <input type="submit" name="btn_update" value="Update" id="btn_update" class="form-control but_upd">
+                                                                    </div>
+                                                                </div>
+                                                                <br />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-1"></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
-                            <div id="TabPanel2" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+                            <div id="TabPanel2_tab" class="ajax__tab_panel" style="display:none;visibility:hidden;">
                                 <div class="">
                                     <div class="">
                                         <div class="outer_fieldset">
@@ -485,7 +484,7 @@
                                                             </td>
                                                             <td>:</td>
                                                             <td>
-                                                                <input name="Year" type="text" id="Year">
+                                                                <input name="Year" type="text" id="Year"  value="@Model.highSchool.Year">
                                                                 <span id="Validator4" style="display:none;"> Required </span>
                                                             </td>
                                                         </tr>
@@ -496,7 +495,7 @@
                                                             </td>
                                                             <td>:</td>
                                                             <td>
-                                                                <input name="Subject" type="text" id="Subject">
+                                                                <input name="Subject" type="text" id="Subject" value="@Model.highSchool.Subject">
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -506,7 +505,7 @@
                                                             </td>
                                                             <td>:</td>
                                                             <td>
-                                                                <input name="Board" type="text" id="Board">
+                                                                <input name="Board" type="text" id="Board" value="@Model.highSchool.Board">
                                                                 <span id="Validator5" style="display:none;"> Required </span>
                                                             </td>
                                                         </tr>
@@ -517,7 +516,7 @@
                                                             </td>
                                                             <td>:</td>
                                                             <td>
-                                                                <input name="Per" type="text" id="Per">
+                                                                <input name="Per" type="text" id="Per" value="@Model.highSchool.Per">
                                                                 <span id="Validator2" style="display:none;"> Required </span>
                                                             </td>
                                                         </tr>
@@ -525,7 +524,7 @@
                                                             <td>Medium of Instruction</td>
                                                             <td>:</td>
                                                             <td>
-                                                                <input name="midiumInstruct" type="text" id="midiumInstruct">
+                                                                <input name="midiumInstruct" type="text" id="midiumInstruct" value="@Model.highSchool.midiumInstruct" >
                                                                 <span id="Validator18" style="display:none;"> Required </span>
                                                             </td>
                                                         </tr>
@@ -1416,7 +1415,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="TabPanel4" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+                            <div id="TabPanel3_tab" class="ajax__tab_panel" style="display:none;visibility:hidden;">
                                 <div class="">
                                     <div class="">
                                         <div class="outer_fieldset">
@@ -1665,7 +1664,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="TabPanel5" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+                            <div id="TabPanel4_tab" class="ajax__tab_panel" style="display:none;visibility:hidden;">
                                 <div class="">
                                     <div class="">
                                         <div class="outer_fieldset">
@@ -1789,7 +1788,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="TabPanel6" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+                            <div id="TabPanel5_tab" class="ajax__tab_panel" style="display:none;visibility:hidden;">
                                 <div class="">
                                     <div class="">
                                         <table cellpadding="0" cellspacing="0" class="table_my table_old" id="Table18">
@@ -1866,7 +1865,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="TabPanel3" class="ajax__tab_panel" style="display:none;visibility:hidden;">
+                            <div id="TabPanel6_tab" class="ajax__tab_panel" style="display:none;visibility:hidden;">
 
                                 <div class="">
                                     <div class="">
@@ -1976,86 +1975,93 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
-
-            </div>
-
-
-            <div id="other_opt_div" class="span3">
-
-                <div class="outer_fieldset  other_opt">
-                    <div class="fieldset2">
-
-
-                        <table cellpadding="0" cellspacing="0" class="table_my " id="Table1">
-
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <a> Add/Edit Interviewee Image                  </a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="db_img">
-                                        <img id="Image1" src="../admin/upload/EmpInfo/EmpInfo_pic_up_IMG-20240428-WA0019-min.jpg">
-
-
-
-                                        <br>
-                                        <br>
-
-
-
-
-
-
-
-                                    </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td>
-                                        <a>Update  Image</a>
-                                        <br>
-                                        <a>Less Than 100 KB</a>
-                                        <br>
-                                        <br>
-
-                                        <input type="file" name="FileUpload1" id="FileUpload1" onchange="javascript : return validImage(this)">
-                                        <span id="Validator14" style="display:none;">Select image</span>
-                                        <br>
-                                        <input type="submit" name="btn_imageupdate" value="Image Update" id="btn_imageupdate">
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        Current Status:
-                                        <span id="lblstatus" class="lbl_g">Active</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>  </td>
-                                </tr>
-                                <tr>
-                                    <td>  &nbsp;</td>
-                                </tr>
-
-
-                            </tbody>
-                        </table>
-
+                <div id="other_opt_div" class="span3">
+                    <div class="outer_fieldset  other_opt">
+                        <div class="fieldset2">
+                            <table cellpadding="0" cellspacing="0" class="table_my " id="Table1">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a> Add/Edit Interviewee Image                  </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="db_img">
+                                            <img id="Image1" src="../admin/upload/EmpInfo/EmpInfo_pic_up_IMG-20240428-WA0019-min.jpg">
+                                            <br>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a>Update  Image</a>
+                                            <br>
+                                            <a>Less Than 100 KB</a>
+                                            <br>
+                                            <br>
+                                            <input type="file" name="FileUpload1" id="FileUpload1" onchange="javascript : return validImage(this)">
+                                            <span id="Validator14" style="display:none;">Select image</span>
+                                            <br>
+                                            <input type="submit" name="btn_imageupdate" value="Image Update" id="btn_imageupdate">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Current Status:
+                                            <span id="lblstatus" class="lbl_g">Active</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>  </td>
+                                    </tr>
+                                    <tr>
+                                        <td>  &nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
             </div>
-
-
-
         </div>
-
-
     </div>
 </form>
+<script>
+    $(document).ready(function () {
+        var tabs = document.querySelectorAll('.tab');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener('click', (el) => {
+                var req = document.querySelectorAll('.tab')
+                for (var j = 0; j < req.length; j++) {
+                    document.getElementById("" + req[j].getAttribute('data-target')).style.visibility = "hidden";
+                    document.getElementById("" + req[j].getAttribute('data-target')).style.display = "none";
+                    req[j].classList.remove('tab-active')
+
+
+                }
+                console.log(el)
+                document.getElementById("" + el.target.getAttribute('data-target')).style.visibility = "visible";
+                el.target.classList.add('tab-active')
+                document.getElementById("" + el.target.getAttribute('data-target')).style.display = "block";
+
+            })
+        }
+    })
+</script>
+<script>
+    function BindDesig(obj, id) {
+        BindDLL(obj, id, "/AjaxHandler/GetDesignationAccDepartment");
+    }
+    function BindDistrict(obj, id) {
+        BindDLL(obj, id, "/AjaxHandler/GetDistrictAccState");
+    }
+    function BindBlock(obj, id) {
+        BindDLL(obj, id, "/AjaxHandler/GetBlockAccDistrict");
+    }
+    function BindCity(obj, id) {
+        BindDLL(obj, id, "/AjaxHandler/GetCityAccState");
+    }
+</script>

@@ -1,4 +1,5 @@
 ﻿using AMNEVH.Models;
+using AMNEVH.Models.UserEntities;
 using System;
 using System.Collections.Generic;
 using System.Data;

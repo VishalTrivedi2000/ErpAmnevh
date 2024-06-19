@@ -279,16 +279,5 @@ namespace AMNEVH.Models
     public class AllClasses
     {
     }
-    public class User
-    {
-        public string UserName { get; set; } 
-        public string Password { get; set; } 
-    }
-    public class UserType
-    {
-        public string welcomeText { get; set; }
-
-        public string ddlTypeID { get; set; }
-        public string ddlType { get; set; }
-    }
+   
 }

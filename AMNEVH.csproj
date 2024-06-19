@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AjaxHandlerController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -128,8 +129,14 @@
     </Compile>
     <Compile Include="Models\AllClasses.cs" />
     <Compile Include="Models\BusinessLayer.cs" />
+    <Compile Include="Models\CommonMethods.cs" />
     <Compile Include="Models\DataLayer.cs" />
     <Compile Include="Models\Executer.cs" />
+    <Compile Include="Models\GeoRegionEntities\Block.cs" />
+    <Compile Include="Models\GeoRegionEntities\City.cs" />
+    <Compile Include="Models\GeoRegionEntities\District.cs" />
+    <Compile Include="Models\GeoRegionEntities\State.cs" />
+    <Compile Include="Models\UserEntities\UserEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +156,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\customJS\binder.js" />
+    <Content Include="Content\customJS\convert.js" />
     <Content Include="Content\innser_css\44224-200.png" />
     <Content Include="Content\innser_css\a.png" />
     <Content Include="Content\innser_css\AdmForm.jpg" />
@@ -357,6 +366,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AjaxHandler\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
